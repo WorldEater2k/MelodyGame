@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace MelodyGame
 {
-    public partial class Form1 : Form
+    public partial class FormGame : Form
     {
-        public Form1()
+        public FormGame()
         {
             InitializeComponent();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            MediaPlayer.URL = Quiz.list[0];
         }
     }
 }
