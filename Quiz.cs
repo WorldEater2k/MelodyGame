@@ -9,8 +9,8 @@ namespace MelodyGame
     {
         static public List<string> list = new List<string>();
         static public int gameDuration = 60;
-        static public int musicDuration = 10;
-        static public bool randomStart = false;
+        static public int musicDuration = 15;
+        static public bool randomStart = true;
         static public string lastFolder = "";
         static public bool allDirectories = false;
         static string regKeyName = "Software\\Baldezhland\\MelodyGame";

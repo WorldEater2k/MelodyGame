@@ -13,12 +13,17 @@ namespace MelodyGame
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            Quiz.allDirectories = cbSubfolders.Checked;
+            Quiz.gameDuration = Convert.ToInt32(cbGameDuration.Text);
+            Quiz.musicDuration = Convert.ToInt32(cbMusicDuration.Text);
+            Quiz.randomStart = cbRandomStart.Checked;
             Quiz.SaveSettings();
             Hide();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            LoadSettings();
             Hide();
         }
 
@@ -33,11 +38,21 @@ namespace MelodyGame
                 lbSongs.Items.AddRange(music_list);
                 Quiz.list.Clear();
                 Quiz.list.AddRange(music_list);
+                Quiz.lastFolder = folder_view.SelectedPath;
             }
-            else
-            {
-
-            }
+        }
+        private void FormSettings_Load(object sender, EventArgs e)
+        {
+            LoadSettings();
+        }
+        private void LoadSettings()
+        {
+            cbGameDuration.Text = Quiz.gameDuration.ToString();
+            cbMusicDuration.Text = Quiz.musicDuration.ToString();
+            cbRandomStart.Checked = Quiz.randomStart;
+            cbSubfolders.Checked = Quiz.allDirectories;
+            lbSongs.Items.Clear();
+            lbSongs.Items.AddRange(Quiz.list.ToArray());
         }
     }
 }

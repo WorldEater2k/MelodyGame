@@ -97,6 +97,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formMain";
             this.Text = "Угадай мелодию";
+            this.Load += new System.EventHandler(this.formMain_Load);
             this.ResumeLayout(false);
 
         }

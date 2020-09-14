@@ -30,8 +30,19 @@ namespace MelodyGame
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            Hide();
-            fg.ShowDialog();
+            if (Quiz.lastFolder == "")
+                MessageBox.Show("Перед началом игры зайдите в настройки и выберите папку с музыкой!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                Hide();
+                fg.ShowDialog();
+            }
+        }
+
+        private void formMain_Load(object sender, EventArgs e)
+        {
+            Quiz.ReadSettings();
+            Quiz.ReadMusic();
         }
     }
 }
