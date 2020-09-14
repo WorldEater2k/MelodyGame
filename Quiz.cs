@@ -13,6 +13,7 @@ namespace MelodyGame
         static public bool randomStart = true;
         static public string lastFolder = "";
         static public bool allDirectories = false;
+        static public string currentSong = "";
         static string regKeyName = "Software\\Baldezhland\\MelodyGame";
         static public void ReadMusic()
         {

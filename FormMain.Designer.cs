@@ -1,6 +1,6 @@
 ﻿namespace MelodyGame
 {
-    partial class formMain
+    partial class FormMain
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.btnPlay = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -85,7 +85,7 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // formMain
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -95,7 +95,7 @@
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.btnPlay);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "formMain";
+            this.Name = "FormMain";
             this.Text = "Угадай мелодию";
             this.Load += new System.EventHandler(this.formMain_Load);
             this.ResumeLayout(false);

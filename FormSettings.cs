@@ -6,6 +6,8 @@ namespace MelodyGame
 {
     public partial class FormSettings : Form
     {
+        string[] music_list;
+        FolderBrowserDialog folder_view = new FolderBrowserDialog();
         public FormSettings()
         {
             InitializeComponent();
@@ -17,6 +19,9 @@ namespace MelodyGame
             Quiz.gameDuration = Convert.ToInt32(cbGameDuration.Text);
             Quiz.musicDuration = Convert.ToInt32(cbMusicDuration.Text);
             Quiz.randomStart = cbRandomStart.Checked;
+            Quiz.list.Clear();
+            Quiz.list.AddRange(music_list);
+            Quiz.lastFolder = folder_view.SelectedPath;
             Quiz.SaveSettings();
             Hide();
         }
@@ -29,16 +34,12 @@ namespace MelodyGame
 
         private void btnFolder_Click(object sender, EventArgs e)
         {
-            FolderBrowserDialog folder_view = new FolderBrowserDialog();
             if (folder_view.ShowDialog() == DialogResult.OK)
             {
-                string[] music_list = Directory.GetFiles(folder_view.SelectedPath, "*.mp3", cbSubfolders.Checked?
+                music_list = Directory.GetFiles(folder_view.SelectedPath, "*.mp3", cbSubfolders.Checked?
                                                          SearchOption.AllDirectories : SearchOption.TopDirectoryOnly);
                 lbSongs.Items.Clear();
                 lbSongs.Items.AddRange(music_list);
-                Quiz.list.Clear();
-                Quiz.list.AddRange(music_list);
-                Quiz.lastFolder = folder_view.SelectedPath;
             }
         }
         private void FormSettings_Load(object sender, EventArgs e)

@@ -64,6 +64,12 @@
     <Compile Include="FormSettings.Designer.cs">
       <DependentUpon>FormSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGuessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGuessing.Designer.cs">
+      <DependentUpon>FormGuessing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quiz.cs" />
@@ -75,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSettings.resx">
       <DependentUpon>FormSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGuessing.resx">
+      <DependentUpon>FormGuessing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -103,9 +112,6 @@
     <None Include="Resources\icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1585255578_1-p-foni-so-zvukovimi-volnami-1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\back.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -132,6 +138,21 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fail_sound.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fail_sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right_answer.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
